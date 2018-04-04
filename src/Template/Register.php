@@ -28,7 +28,7 @@ class Register
      * @return void
      */
     public function bootstrap(Application $app){
-        $app->register(new ('Riverskies\Laravel\MobileDetect\MobileDetectServiceProvider'));
+        $app->register(\Riverskies\Laravel\MobileDetect\MobileDetectServiceProvider::class);
 
         $this->mapWebRoutes($app->make(Router::class));
     }
@@ -42,7 +42,7 @@ class Register
     protected function mapWebRoutes(Router $router){
         /* Inject routes dynamically */
         $router->group(['middleware' => 'web'], function($router){
-            require_once __DIR__.'/routes.php';
+            require_once __DIR__.'/Support/routes.php';
         });
     }
 }
