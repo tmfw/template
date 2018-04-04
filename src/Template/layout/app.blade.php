@@ -45,13 +45,13 @@
 </div>
 <div id="main-wrapper">
 
-    @if(!isset($error_call) || !$error_call)
-        @include('template::partial.header')
-    @endif
+@if(!isset($error_call) || !$error_call)
+    @include('template::partial.header')
+@endif
 
-    @include('template::partial.sidebar')
+@include('template::partial.sidebar')
 
-    <!-- Content Wrapper. Contains page content -->
+<!-- Content Wrapper. Contains page content -->
     <div class="page-wrapper">
         <div class="container-fluid">
 

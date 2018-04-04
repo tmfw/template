@@ -1,3 +1,5 @@
+<script src="{{ template_plugin('jquery/jquery.min.js') }}"></script>
+
 <!-- ============================================================== -->
 <!-- All Jquery -->
 <!-- ============================================================== -->
@@ -22,9 +24,8 @@
 <script src="{{ template_plugin('icheck/icheck.min.js') }}"></script>
 
 <!-- PNotify -->
-<script src="{{ template_plugin('icheck/icheck.min.js') }}"></script>
-<script src="{{ template_plugin('pnotify/pnotify.custom.min.js') }}"></script>
-<script> PNotify.prototype.options.styling = "bootstrap3"; </script>
+{{--<script src="{{ template_plugin('pnotify/pnotify.custom.min.js') }}"></script>--}}
+{{--<script> PNotify.prototype.options.styling = "bootstrap3"; </script>--}}
 
 <!-- Lightbox -->
 <script src="{{ template_plugin('Magnific-Popup-master/dist/jquery.magnific-popup.min.js') }}"></script>
