@@ -4,20 +4,19 @@
         <!-- Logo -->
         <!-- ============================================================== -->
         <div class="navbar-header">
-            <a class="navbar-brand" href="<?php echo url('/'); ?>">
-                <!-- Logo icon --><b>
-                    <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
-                    <!-- Dark Logo icon -->
-                    <!--<span class="dark-logo">Todo</span>-->
+            <a class="navbar-brand" href="{{ url('/') }}">
+                <!-- Logo icon -->
+                <b>
                     <!-- Light Logo icon -->
                     <span class="light-logo">Todo</span>
                 </b>
                 <!--End Logo icon -->
-                <!-- Logo text --><span>
-                         <!-- dark Logo text -->
-                    <!--<span class="dark-logo">Mundo</span>-->
-                    <!-- Light Logo text -->
-                         <span class="light-logo">Mundo</span></span> </a>
+                <!-- Logo text -->
+                <span>
+                    <!-- dark Logo text -->
+                    <span class="light-logo">Mundo</span>
+                </span>
+            </a>
         </div>
         <!-- ============================================================== -->
         <!-- End Logo -->
@@ -29,8 +28,16 @@
             <!-- ============================================================== -->
             <ul class="navbar-nav mr-auto">
                 <!-- This is  -->
-                <li class="nav-item"> <a class="nav-link nav-toggler hidden-md-up waves-effect waves-dark" href="javascript:void(0)"><i class="ti-menu"></i></a> </li>
-                <li class="nav-item"> <a class="nav-link sidebartoggler hidden-sm-down waves-effect waves-dark" href="javascript:void(0)"><i class="ti-menu"></i></a> </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-toggler hidden-md-up waves-effect waves-dark" href="javascript:void(0)">
+                        <i class="ti-menu"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link sidebartoggler hidden-sm-down waves-effect waves-dark" href="javascript:void(0)">
+                        <i class="ti-menu"></i>
+                    </a>
+                </li>
                 <!-- Page heading -->
                 <li class="nav-item hidden-sm-down">
                     <span>
@@ -48,18 +55,25 @@
                 <!-- Profile -->
                 <!-- ============================================================== -->
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <img src="{{ template_asset('images/icon/staff-w.png') }}" alt="{{ Auth::user()->profile->name }}" class="profile-pic" />
+                    <a class="nav-link dropdown-toggle waves-effect waves-dark"
+                       href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img src="{{ template_asset('images/icon/staff-w.png') }}"
+                             alt="{{ Auth::user()->name }}" class="profile-pic" />
                     </a>
                     <div class="dropdown-menu dropdown-menu-right animated flipInY">
                         <ul class="dropdown-user">
                             <li>
                                 <div class="dw-user-box">
-                                    <div class="u-img"><img src="{{ template_asset('images/icon/staff-w.png') }}" alt="{{ Auth::user()->profile->name }}"></div>
+                                    <div class="u-img">
+                                        <img src="{{ template_asset('images/icon/staff-w.png') }}"
+                                             alt="{{ Auth::user()->name }}">
+                                    </div>
                                     <div class="u-text">
-                                        <h4>{{ Auth::user()->profile->name }}</h4>
-                                        <p class="text-muted">{{ Auth::user()->profile->email }}</p>
-                                        <a href="{{ url('/logout') }}" class="btn btn-rounded btn-danger btn-sm"><?php echo lang('header_sign_out'); ?></a>
+                                        <h4>{{ Auth::user()->name }}</h4>
+                                        <p class="text-muted">{{ Auth::user()->email }}</p>
+                                        <a href="{{ url('/logout') }}" class="btn btn-rounded btn-danger btn-sm">
+                                            @lang('header_sign_out')
+                                        </a>
                                     </div>
                                 </div>
                             </li>

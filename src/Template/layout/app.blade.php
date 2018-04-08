@@ -45,10 +45,7 @@
 </div>
 <div id="main-wrapper">
 
-@if(!isset($error_call) || !$error_call)
-    @include('template::partial.header')
-@endif
-
+@include('template::partial.header')
 @include('template::partial.sidebar')
 
 <!-- Content Wrapper. Contains page content -->
