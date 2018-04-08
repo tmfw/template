@@ -41,11 +41,7 @@
                 <!-- Page heading -->
                 <li class="nav-item hidden-sm-down">
                     <span>
-                        <div class="col-md-5 align-self-center">
-                            <h3 class="text-themecolor">
-                                @yield('page.title', 'Administration')
-                            </h3>
-                        </div>
+                        @yield('page.title', 'Administration')
                     </span>
                 </li>
             </ul>
