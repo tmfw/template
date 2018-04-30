@@ -48,15 +48,18 @@
         <div class="login-box card">
             <div class="card-body">
 
-            {{-- Flash message --}}
-            @if (Session::has('flash_notification.message'))
-                <div class="alert alert-{{ Session::get('flash_notification.level') }} flat">
-                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-
-                    {{ Session::get('flash_notification.message') }}
-                </div>
-            @endif
-            {{-- End Flash Message --}}
+                {{-- Error messages --}}
+                @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
+                {{-- End error messages --}}
 
             {{-- Main content --}}
             @yield('page.content')

@@ -8,12 +8,18 @@
 <script src="{{ template_plugin('bootstrap/js/bootstrap.min.js') }}"></script>
 <!-- slimscrollbar scrollbar JavaScript -->
 <script src="{{ template_theme('bold/js/perfect-scrollbar.jquery.min.js') }}"></script>
+<!-- Sticky Kit JavaScript -->
+<script src="{{ template_plugin('sticky-kit-master/dist/sticky-kit.min.js') }}"></script>
 <!--Wave Effects -->
 <script src="{{ template_theme('bold/js/waves.js') }}"></script>
 <!--Menu sidebar -->
 <script src="{{ template_theme('bold/js/sidebarmenu.js') }}"></script>
 <!--Custom JavaScript -->
 <script src="{{ template_theme('bold/js/custom.min.js') }}"></script>
+
+{{-- Moment --}}
+<script src="{{ template_plugin('moment/min/moment.min.js') }}"></script>
+<script src="{{ template_plugin('moment/min/locales.js') }}"></script>
 
 <!-- Bootstrap table -->
 <script src="{{ template_plugin('bootstrap-table/src/bootstrap-table.js') }}"></script>
@@ -23,13 +29,6 @@
 
 <script src="{{ template_plugin('icheck/icheck.min.js') }}"></script>
 
-<!-- PNotify -->
-{{--<script src="{{ template_plugin('pnotify/pnotify.custom.min.js') }}"></script>--}}
-{{--<script> PNotify.prototype.options.styling = "bootstrap3"; </script>--}}
-
-<!-- Lightbox -->
-<script src="{{ template_plugin('Magnific-Popup-master/dist/jquery.magnific-popup.min.js') }}"></script>
-<script src="{{ template_plugin('Magnific-Popup-master/dist/jquery.magnific-popup-init.js') }}"></script>
 
 
 <script>
@@ -53,6 +52,9 @@
                 new PNotify({title: 'Table remote data', text: 'data: ' + data, type: 'error'});
             }
         });
+
+        /* Sticky */
+        $('.sticky-ele').stick_in_parent();
     });
 </script>
 <!-- End bootstrap -->

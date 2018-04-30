@@ -22,7 +22,7 @@
     @ios
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="<?php echo $title; ?>">
+    <meta name="apple-mobile-web-app-title" content="Creative Ideator">
     @endios
 
     @android
@@ -52,14 +52,21 @@
     <div class="page-wrapper">
         <div class="container-fluid">
 
-            {{-- Flash message --}}
-            @if (Session::has('flash_notification.message'))
-                <div class="alert alert-{{ Session::get('flash_notification.level') }} flat">
+            {{-- Error messages --}}
+            @if ($errors->any())
+                <div class="alert alert-danger">
                     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-
-                    {{ Session::get('flash_notification.message') }}
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
                 </div>
             @endif
+            {{-- End error messages --}}
+
+            {{-- Flash message --}}
+            @include('flash::message')
             {{-- End Flash Message --}}
 
             {{-- Main content --}}

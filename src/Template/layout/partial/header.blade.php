@@ -61,7 +61,7 @@
                             <li>
                                 <div class="dw-user-box">
                                     <div class="u-img">
-                                        <img src="{{ template_asset('images/icon/staff-w.png') }}"
+                                        <img src="{{ template_asset('images/icon/staff.png') }}"
                                              alt="{{ Auth::user()->name }}">
                                     </div>
                                     <div class="u-text">
@@ -77,5 +77,6 @@
                     </div>
                 </li>
             </ul>
+        </div>
     </nav>
 </header>

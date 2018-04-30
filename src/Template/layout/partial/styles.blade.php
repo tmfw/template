@@ -11,10 +11,9 @@
 <link href="{{ template_plugin('toast-master/css/jquery.toast.css') }}" rel="stylesheet">
 {{-- PNotify --}}
 {{--<link href="{{ template_plugin('pnotify/pnotify.custom.min.css') }}" rel="stylesheet">--}}
-{{-- Lightbox --}}
-<link href="{{ template_plugin('Magnific-Popup-master/dist/magnific-popup.css') }}" rel="stylesheet">
 {{-- Custom CSS --}}
 <link href="{{ template_theme('bold/css/style.css') }}" rel="stylesheet">
+<link href="{{ template_theme('bold/css/pages/stylish-tooltip.css') }}" rel="stylesheet">
 {{-- You can change the theme colors from here --}}
 <link href="{{ template_theme('bold/css/colors/purple-dark.css') }}" id="theme" rel="stylesheet">
 {{-- TodoMundo --}}
