@@ -72,8 +72,8 @@
                         <span class="hide-menu">@lang('menu.admins')</span>
                     </a>
                     <ul aria-expanded="false" class="collapse">
-                        <li><a href="{{ url('/') }}">Register system user</a></li>
-                        <li><a href="{{ url('/') }}">@lang('menu.admin_users')</a></li>
+                        <li><a href="{{ url('user/admin/create') }}">Register system user</a></li>
+                        <li><a href="{{ url('user/admins') }}">@lang('menu.admin_users')</a></li>
                     </ul>
                 </li>
 
