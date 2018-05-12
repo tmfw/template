@@ -68,7 +68,7 @@
                                         <h4>{{ Auth::user()->name }}</h4>
                                         <p class="text-muted">{{ Auth::user()->email }}</p>
                                         <a href="{{ url('/logout') }}" class="btn btn-rounded btn-danger btn-sm">
-                                            @lang('header_sign_out')
+                                            @lang('common.label.logout')
                                         </a>
                                     </div>
                                 </div>

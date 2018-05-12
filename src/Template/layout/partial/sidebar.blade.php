@@ -55,12 +55,12 @@
                     </a>
                 </li>
 
-                <li>
+                {{--<li>
                     <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false">
                         <i class="mdi mdi-briefcase-check"></i>
                         <span class="hide-menu">@lang('menu.distributors')</span>
                     </a>
-                </li>
+                </li>--}}
 
 
                 <!-- Administration -->
